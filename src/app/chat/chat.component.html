@@ -1,0 +1,18 @@
+<div class="container">
+    <form class="form-group">
+        <label for="messagecontent" class="form-control">New Message: </label>
+        <input type="text" [(ngModel)]="messagecontent" name="messagecontent" class="form-control" />
+        <button (click)="chat(messagecontent)" class=" btn btn-primary ">
+      Send
+    </button>
+    </form>
+
+    <div class="messages ">
+        <h3>Chat Messages:</h3>
+        <ul>
+            <li *ngFor="let message of messages">
+                {{ message }}
+            </li>
+        </ul>
+    </div>
+</div>
